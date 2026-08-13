@@ -1,81 +1,45 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Image as ImageIcon, Camera, Sparkles, X, ChevronRight, Bus, MapPin, Users } from 'lucide-react';
+import { Camera, X, ChevronRight } from 'lucide-react';
 import { TRANSLATIONS } from '../utils/translations';
 
 interface GallerySectionProps {
   lang: 'ID' | 'EN';
+  onViewAllGallery: () => void;
 }
 
-export default function GallerySection({ lang }: GallerySectionProps) {
-  const [activeFilter, setActiveFilter] = useState<'all' | 'armada' | 'gathering' | 'destinasi'>('all');
+export default function GallerySection({ lang, onViewAllGallery }: GallerySectionProps) {
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
 
   const t = TRANSLATIONS[lang];
+  const isEN = lang === 'EN';
 
   const galleryItems = [
     {
       id: 1,
-      category: 'armada',
-      title: 'Big Bus Eksekutif Legrest',
-      subtitle: 'Armada Zivanes & Miyor Full AC',
-      image: 'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&q=80&w=800'
+      title: isEN ? 'Bena Cultural Visit' : 'Kunjungan Adat Kampung Bena',
+      subtitle: isEN ? 'Bena Traditional Village, Bajawa, Flores, NTT' : 'Kampung Adat Bena, Bajawa, Flores, NTT',
+      image: '/gallery_tourists_bena_tenun.jpg'
     },
     {
       id: 2,
-      category: 'gathering',
-      title: 'Tour Gathering Mandeh',
-      subtitle: 'Keluarga Besar & Instansi Perusahaan',
-      image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800'
+      title: isEN ? 'Wologai Traditional Village' : 'Kampung Adat Wologai Flores',
+      subtitle: isEN ? 'Wologai Traditional Village, Ende, Flores, NTT' : 'Desa Adat Wologai, Ende, Flores, NTT',
+      image: '/gallery_wologai_village.jpg'
     },
     {
       id: 3,
-      category: 'destinasi',
-      title: 'Jam Gadang & Ngarai Sianok',
-      subtitle: 'Bukittinggi, Sumatera Barat',
-      image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800'
+      title: isEN ? 'Premium Tour Service' : 'Layanan Transportasi Terbaik',
+      subtitle: isEN ? 'Flores Tour Overland Service' : 'Layanan Overland Tour Flores',
+      image: '/gallery_tourists_driver.jpg'
     },
     {
       id: 4,
-      category: 'armada',
-      title: 'Toyota Hiace Premio Eksekutif',
-      subtitle: 'Unit Nyaman & Kabin Luas',
-      image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=800'
-    },
-    {
-      id: 5,
-      category: 'destinasi',
-      title: 'Danau Diatas & Danau Dibawah',
-      subtitle: 'Alahan Panjang, Solok',
-      image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=800'
-    },
-    {
-      id: 6,
-      category: 'gathering',
-      title: 'Tour Outbound Bromo & Malang',
-      subtitle: 'Peserta Tour Nusantara',
-      image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800'
-    },
-    {
-      id: 7,
-      category: 'destinasi',
-      title: 'Marina Bay Sands Singapura',
-      subtitle: 'Rute Tour Internasional',
-      image: 'https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&q=80&w=800'
-    },
-    {
-      id: 8,
-      category: 'armada',
-      title: 'Medium Bus Pariwisata 31 Seat',
-      subtitle: 'Fasilitas TV, Karaoke & Selimut',
-      image: 'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&q=80&w=800'
+      title: isEN ? 'Mount Inerie Peak Climb' : 'Pendakian Puncak Gunung Inerie',
+      subtitle: isEN ? 'Mount Inerie, Bajawa, Flores, NTT' : 'Gunung Inerie, Bajawa, Flores, NTT',
+      image: '/gallery_mount_inerie_flag.jpg'
     }
   ];
-
-  const filteredItems = galleryItems.filter(item => {
-    if (activeFilter === 'all') return true;
-    return item.category === activeFilter;
-  });
 
   return (
     <section id="gallery" className="py-20 bg-slate-900 text-white overflow-hidden relative border-b border-slate-800 text-left">
@@ -85,7 +49,7 @@ export default function GallerySection({ lang }: GallerySectionProps) {
         <div className="text-center max-w-3xl mx-auto space-y-3" id="gallery-heading">
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-red-500/20 border border-amber-500/40 text-red-400 font-display font-extrabold text-xs tracking-wider uppercase">
             <Camera className="w-4 h-4 text-red-400" />
-            <span>GALERI DOKUMENTASI & FLEET</span>
+            <span>{isEN ? 'GALLERY & FLEET DOCUMENTATION' : 'DOKUMENTASI GALERI & ARMADA'}</span>
           </div>
 
           <h2 className="font-display font-black text-4xl sm:text-5xl text-white tracking-tight leading-tight uppercase">
@@ -95,57 +59,15 @@ export default function GallerySection({ lang }: GallerySectionProps) {
           <div className="w-20 h-1 bg-red-500 mx-auto rounded-full" />
 
           <p className="font-sans text-slate-300 text-xs sm:text-sm leading-relaxed font-medium">
-            Dokumentasi armada bus, sewa mobil, kegiatan gathering &amp; perjalanan wisata Nituriu Travel.
+            {isEN
+              ? 'Beautiful travel documentation and exotic destinations across Bajawa and Flores, NTT.'
+              : 'Dokumentasi perjalanan wisata dan keindahan alam perkampungan adat di Bajawa dan Flores, NTT.'}
           </p>
-
-          {/* FILTER TABS */}
-          <div className="flex flex-wrap items-center justify-center gap-2 pt-4">
-            <button
-              onClick={() => setActiveFilter('all')}
-              className={`px-4 py-2 rounded-full font-display font-extrabold text-xs transition-all cursor-pointer ${
-                activeFilter === 'all'
-                  ? 'bg-[#dc2626] text-white shadow-lg shadow-red-600/30'
-                  : 'bg-white/10 text-slate-300 hover:bg-white/20 border border-white/10'
-              }`}
-            >
-              Semua Foto
-            </button>
-            <button
-              onClick={() => setActiveFilter('armada')}
-              className={`px-4 py-2 rounded-full font-display font-extrabold text-xs transition-all cursor-pointer ${
-                activeFilter === 'armada'
-                  ? 'bg-[#dc2626] text-white shadow-lg shadow-red-600/30'
-                  : 'bg-white/10 text-slate-300 hover:bg-white/20 border border-white/10'
-              }`}
-            >
-              Armada Bus & Mobil
-            </button>
-            <button
-              onClick={() => setActiveFilter('gathering')}
-              className={`px-4 py-2 rounded-full font-display font-extrabold text-xs transition-all cursor-pointer ${
-                activeFilter === 'gathering'
-                  ? 'bg-[#dc2626] text-white shadow-lg shadow-red-600/30'
-                  : 'bg-white/10 text-slate-300 hover:bg-white/20 border border-white/10'
-              }`}
-            >
-              Tour & Gathering
-            </button>
-            <button
-              onClick={() => setActiveFilter('destinasi')}
-              className={`px-4 py-2 rounded-full font-display font-extrabold text-xs transition-all cursor-pointer ${
-                activeFilter === 'destinasi'
-                  ? 'bg-[#dc2626] text-white shadow-lg shadow-red-600/30'
-                  : 'bg-white/10 text-slate-300 hover:bg-white/20 border border-white/10'
-              }`}
-            >
-              Destinasi Wisata
-            </button>
-          </div>
         </div>
 
         {/* GALLERY GRID */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {filteredItems.map((item, index) => (
+          {galleryItems.map((item, index) => (
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -172,6 +94,17 @@ export default function GallerySection({ lang }: GallerySectionProps) {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        {/* VIEW ALL BUTTON (Selengkapnya) */}
+        <div className="text-center pt-4">
+          <button
+            onClick={onViewAllGallery}
+            className="inline-flex items-center gap-2 px-8 py-3.5 bg-gradient-to-r from-red-700 via-red-600 to-red-500 hover:from-red-600 hover:to-[#0f2b5c] text-white font-display font-black text-xs uppercase tracking-wider rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer"
+          >
+            <span>{isEN ? 'View More Gallery' : 'Selengkapnya'}</span>
+            <ChevronRight className="w-4.5 h-4.5" />
+          </button>
         </div>
 
       </div>
@@ -203,6 +136,3 @@ export default function GallerySection({ lang }: GallerySectionProps) {
     </section>
   );
 }
-
-
-

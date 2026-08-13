@@ -11,6 +11,7 @@ import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 import BookingModal from './components/BookingModal';
 import GalleryPage from './components/GalleryPage';
+import GallerySection from './components/GallerySection';
 import { Car } from './types';
 import { CARS } from './data/cars';
 import { ChevronUp } from 'lucide-react';
@@ -151,6 +152,8 @@ export default function App() {
             />
 
             <BookingSteps lang={lang} />
+
+            <GallerySection lang={lang} onViewAllGallery={() => handleNavClick('gallery')} />
 
             <Testimonials lang={lang} />
           </>
