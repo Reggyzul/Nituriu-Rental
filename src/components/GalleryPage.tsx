@@ -12,103 +12,98 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
   const [selectedPhoto, setSelectedPhoto] = useState<{ image: string; title: string; subtitle: string; location: string } | null>(null);
 
   const t = TRANSLATIONS[lang];
+  const isEN = lang === 'EN';
 
   const galleryItems = [
     {
       id: 1,
-      title: 'Tour Silaturahmi Sipiso-Piso & Danau Toba',
-      subtitle: 'Keluarga Besar Sepakat bersama Nituriu Travel',
-      location: 'Air Terjun Sipiso-Piso, Danau Toba, Sumatera Utara',
-      image: '/gallery_sipisopiso.avif',
-      badge: 'Danau Toba & Sipiso-Piso'
+      title: isEN ? 'Bena Traditional Village' : 'Kampung Adat Bena',
+      subtitle: isEN 
+        ? 'Exotic megalithic village with traditional houses at the foot of Mount Inerie.'
+        : 'Keunikan perkampungan megalitikum di bawah kaki Gunung Inerie dengan tradisi Ngada yang masih sangat kental.',
+      location: isEN ? 'Foot of Mount Inerie, Bajawa, Flores, NTT' : 'Kaki Gunung Inerie, Bajawa, Flores, NTT',
+      image: '/dest_bunaken.avif',
+      badge: isEN ? 'Ngada Culture' : 'Budaya Ngada'
     },
     {
       id: 2,
-      title: 'Tour Monumen Kapal Apung W.K.B Banda Aceh',
-      subtitle: 'Kunjungan Wisata Sejarah & Edukasi Tsunami Aceh',
-      location: 'Monumen Kapal Apung PLN, Banda Aceh',
-      image: '/gallery_kapal_apung.avif',
-      badge: 'Banda Aceh Tour'
+      title: isEN ? 'Mount Inerie Peak' : 'Puncak Gunung Inerie',
+      subtitle: isEN 
+        ? 'The majestic pyramid-shaped volcano, an iconic landmark in Bajawa.'
+        : 'Gunung piramida megah ikonik Flores yang menantang dan memukau mata setiap wisatawan di Bajawa.',
+      location: 'Bajawa, Kabupaten Ngada, Flores, NTT',
+      image: '/dest_tomohon.avif',
+      badge: isEN ? 'Volcano Peak' : 'Puncak Gunung'
     },
     {
       id: 3,
-      title: 'Wisata Keagamaan Masjid Raya Baiturrahman',
-      subtitle: 'Momentum Kebersamaan Peserta Tour Aceh Nituriu Travel',
-      location: 'Masjid Raya Baiturrahman, Banda Aceh',
-      image: '/gallery_baiturrahman.avif',
-      badge: 'Masjid Baiturrahman'
+      title: isEN ? 'Mengeruda Hot Springs Soa' : 'Air Panas Mengeruda Soa',
+      subtitle: isEN 
+        ? 'A natural geothermal hot spring river, perfect for relaxing your body.'
+        : 'Sungai air panas alami yang bersumber langsung dari panas bumi untuk merelaksasi tubuh.',
+      location: 'Soa, Kabupaten Ngada, Flores, NTT',
+      image: '/dest_manado_city.avif',
+      badge: isEN ? 'Natural Spa' : 'Relaksasi Alami'
     },
     {
       id: 4,
-      title: 'Tour Silaturahmi Senggigi View Lombok',
-      subtitle: 'Peserta Tour Nusantara di Spot Ikonik Senggigi',
-      location: 'Senggigi View Beach, Lombok, NTB',
-      image: '/gallery_senggigi.avif',
-      badge: 'Senggigi Lombok'
+      title: isEN ? 'Riung 17 Islands Marine Park' : 'Taman Wisata Alam 17 Pulau Riung',
+      subtitle: isEN 
+        ? 'Exotic cluster of small islands featuring pristine white sands and snorkeling spots.'
+        : 'Gugusan pulau eksotis dengan pasir putih halus, terumbu karang menawan, dan koloni kelelawar raksasa.',
+      location: 'Riung, Kabupaten Ngada, Flores, NTT',
+      image: '/dest_likupang.avif',
+      badge: isEN ? 'Marine Park' : 'Wisata Bahari'
     },
     {
       id: 5,
-      title: 'Tour Silaturahmi Candi Prambanan Jogja',
-      subtitle: 'Keluarga Besar Sepakat Jelajah Heritage Nusantara',
-      location: 'Kompleks Candi Prambanan, DI Yogyakarta',
-      image: '/gallery_prambanan.avif',
-      badge: 'Candi Prambanan Jogja'
+      title: isEN ? 'Wolobobo Hill (Above the Clouds)' : 'Bukit Wolobobo (Negeri di Atas Awan)',
+      subtitle: isEN 
+        ? 'The perfect vantage point to witness the morning mist and Mount Inerie.'
+        : 'Spot menikmati keindahan kabut pagi dan panorama Gunung Inerie berselimut awan putih.',
+      location: 'Bajawa, Kabupaten Ngada, Flores, NTT',
+      image: 'https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=800&q=80',
+      badge: isEN ? 'Mountain View' : 'Negeri di Atas Awan'
     },
     {
       id: 6,
-      title: 'Tour Tugu Kilometer 0 Indonesia Sabang',
-      subtitle: 'Titik Ujung Barat Indonesia bersama Rombongan Keluarga Besar Sepakat',
-      location: 'Tugu Kilometer 0 Indonesia, Sabang, Aceh',
-      image: '/gallery_sabang.avif',
-      badge: 'Sabang Kilometer 0'
+      title: isEN ? 'Danau Wawomudha Crater Lake' : 'Danau Kawah Wawomudha',
+      subtitle: isEN 
+        ? 'A mini volcanic crater lake with reddish water, surrounded by pine forests.'
+        : 'Danau kawah vulkanis mini dengan air kemerahan yang dikelilingi hutan pinus pegunungan Bajawa.',
+      location: 'Bajawa, Kabupaten Ngada, Flores, NTT',
+      image: '/dest_tomohon.avif',
+      badge: isEN ? 'Crater Lake' : 'Danau Vulkanik'
     },
     {
       id: 7,
-      title: 'Tour Wisata Keagamaan Masjid Istiqlal Jakarta',
-      subtitle: 'Kunjungan Rombongan Peserta Wisata di Masjid Istiqlal',
-      location: 'Masjid Istiqlal, DKI Jakarta',
-      image: '/gallery_istiqlal.avif',
-      badge: 'Istiqlal Jakarta'
+      title: isEN ? 'Wogo Megalithic Traditional Village' : 'Kampung Adat Megalitikum Wogo',
+      subtitle: isEN 
+        ? 'Historic megalithic structures and traditional Ngada carvings.'
+        : 'Pemukiman adat alternatif Ngada dengan susunan batu megalitik bersejarah dan tiang adat Ngadhu-Bhaga.',
+      location: 'Wogo, Kabupaten Ngada, Flores, NTT',
+      image: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=800&q=80',
+      badge: isEN ? 'Cultural Heritage' : 'Cagar Budaya'
     },
     {
       id: 8,
-      title: 'Tour Internasional Petronas Twin Towers',
-      subtitle: 'Kunjungan Wisata Mancanegara Kuala Lumpur Malaysia',
-      location: 'Petronas Twin Towers, Kuala Lumpur, Malaysia',
-      image: '/gallery_petronas.avif',
-      badge: 'Kuala Lumpur Malaysia'
+      title: isEN ? 'Ogi Waterfall Bajawa' : 'Air Terjun Ogi Bajawa',
+      subtitle: isEN 
+        ? 'A spectacular 30-meter high waterfall surrounded by lush green valleys.'
+        : 'Air terjun megah setinggi 30 meter dengan debit air deras di tengah lembah hijau yang asri.',
+      location: 'Bajawa, Kabupaten Ngada, Flores, NTT',
+      image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80',
+      badge: isEN ? 'Waterfall Nature' : 'Air Terjun Alam'
     },
     {
       id: 9,
-      title: 'Tour Mancanegara Bangkok & Thailand',
-      subtitle: 'Peserta MT. Sakinah Warahmah BMKT Padang Panjang di Patung Sleeping Buddha',
-      location: 'Bangkok & Hat Yai, Thailand',
-      image: '/gallery_thailand.avif',
-      badge: 'Thailand Tour'
-    },
-    {
-      id: 10,
-      title: 'Tour HeHa Sky View & Jogja bersama Bus Zivanes',
-      subtitle: 'Kebersamaan Rombongan Nituriu Travel & Team Zivanes Bus',
-      location: 'HeHa Sky View, Gunungkidul, Yogyakarta',
-      image: '/gallery_heha.avif',
-      badge: 'HeHa Jogja Tour'
-    },
-    {
-      id: 11,
-      title: 'Tour Jeep Offroad Gunung Bromo & Pasir Berbisik',
-      subtitle: 'Petualangan Seru Peserta Rombongan Nituriu Travel di Bromo',
-      location: 'Kawasan Wisata Gunung Bromo, Jawa Timur',
-      image: '/gallery_bromo.avif',
-      badge: 'Bromo Offroad'
-    },
-    {
-      id: 12,
-      title: 'Tour Silaturahmi Jam Gadang Bukittinggi',
-      subtitle: 'Keluarga Besar Bagindo bersama Team Nituriu Travel',
-      location: 'Taman Jam Gadang, Bukittinggi, Sumatera Barat',
-      image: '/gallery_jam_gadang.avif',
-      badge: 'Jam Gadang Bukittinggi'
+      title: isEN ? 'Traditional Aimere Distillery' : 'Destilasi Tradisional Aimere',
+      subtitle: isEN 
+        ? 'Witnessing the traditional process of distilling Flores local beverages from palm sap.'
+        : 'Proses pembuatan minuman adat khas Flores dari penyulingan nira pohon enau secara tradisional.',
+      location: 'Aimere, Kabupaten Ngada, Flores, NTT',
+      image: 'https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80',
+      badge: isEN ? 'Local Tradition' : 'Tradisi Lokal'
     }
   ];
 
@@ -120,7 +115,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-45 transform scale-105 transition-transform duration-1000"
           style={{
-            backgroundImage: `url('/gallery_sipisopiso.avif')`
+            backgroundImage: `url('/dest_bunaken.avif')`
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/85 via-slate-950/65 to-slate-950/95" />
@@ -132,7 +127,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-600/90 text-white font-extrabold text-[11px] uppercase tracking-widest mb-1 shadow-lg"
           >
             <Camera className="w-4 h-4 text-red-300" />
-            <span>GALERI DOKUMENTASI PERJALANAN Nituriu Travel</span>
+            <span>{isEN ? 'GALLERY OF TRAVEL DOCUMENTATION' : 'GALERI DOKUMENTASI PERJALANAN'}</span>
           </motion.div>
 
           <motion.h1 
@@ -140,7 +135,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
             animate={{ opacity: 1, scale: 1 }}
             className="font-display font-black text-3xl sm:text-5xl text-white tracking-tight leading-tight uppercase drop-shadow-lg"
           >
-            Moment & Tour Gallery
+            {isEN ? 'Destinations & Moments Gallery' : 'Galeri Destinasi & Momen Wisata'}
           </motion.h1>
 
           <motion.p 
@@ -148,7 +143,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
             animate={{ opacity: 1, y: 0 }}
             className="font-sans text-xs sm:text-sm font-bold text-slate-300 uppercase tracking-widest"
           >
-            <span onClick={onNavigateHome} className="hover:text-red-400 cursor-pointer transition-colors">HOME</span> / GALLERY DOKUMENTASI
+            <span onClick={onNavigateHome} className="hover:text-red-400 cursor-pointer transition-colors">HOME</span> / {isEN ? 'GALLERY DOKUMENTASI' : 'GALERI DOKUMENTASI'}
           </motion.p>
         </div>
       </div>
@@ -159,11 +154,13 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
         {/* Subtitle Description */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
           <h2 className="font-display font-black text-3xl sm:text-4xl text-[#0d1b37]">
-            Dokumentasi Perjalanan & Tour Silaturahmi
+            {isEN ? 'NTT Bajawa Travel & Tour Documentation' : 'Dokumentasi Perjalanan & Wisata NTT Bajawa'}
           </h2>
           <div className="w-20 h-1 bg-[#dc2626] mx-auto rounded-full" />
           <p className="font-sans text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
-            Kumpulan momen kebersamaan dan kenangan indah peserta rombongan tour silaturahmi Nituriu Travel di berbagai destinasi favorit domestik & mancanegara (Sabang, Danau Toba, Bromo, Jam Gadang, Jakarta, Jogja, Lombok, Malaysia, Thailand).
+            {isEN 
+              ? 'Collection of beautiful moments and exotic destinations in Bajawa, Ngada Regency, and across Flores, East Nusa Tenggara (NTT) with Nituriu Transport.' 
+              : 'Kumpulan dokumentasi momen indah dan destinasi eksotis di Bajawa, Kabupaten Ngada, serta wilayah Flores, Nusa Tenggara Timur (NTT) bersama Nituriu Transport.'}
           </p>
         </div>
 

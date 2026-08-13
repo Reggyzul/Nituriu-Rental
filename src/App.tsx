@@ -10,6 +10,7 @@ import BookingSteps from './components/BookingSteps';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 import BookingModal from './components/BookingModal';
+import GalleryPage from './components/GalleryPage';
 import { Car } from './types';
 import { CARS } from './data/cars';
 import { ChevronUp } from 'lucide-react';
@@ -17,7 +18,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { TRANSLATIONS } from './utils/translations';
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<'home' | 'about' | 'rentals' | 'destinations'>('home');
+  const [currentPage, setCurrentPage] = useState<'home' | 'about' | 'rentals' | 'destinations' | 'gallery'>('home');
   const [activeSection, setActiveSection] = useState('home');
   const [selectedCar, setSelectedCar] = useState<Car | null>(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -80,15 +81,23 @@ export default function App() {
   const handleNavClick = (sectionId: string) => {
     if (sectionId === 'about-page' || sectionId === 'about') {
       setCurrentPage('about');
+      setActiveSection('about');
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else if (sectionId === 'rentals') {
       setCurrentPage('rentals');
+      setActiveSection('rentals');
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else if (sectionId === 'destinations' && currentPage !== 'home') {
       setCurrentPage('destinations');
+      setActiveSection('destinations');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (sectionId === 'gallery') {
+      setCurrentPage('gallery');
+      setActiveSection('gallery');
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       setCurrentPage('home');
+      setActiveSection(sectionId);
       setTimeout(() => {
         const element = document.getElementById(sectionId);
         if (element) {
@@ -149,6 +158,8 @@ export default function App() {
           <AboutPage lang={lang} onNavigateHome={() => handleNavClick('home')} />
         ) : currentPage === 'destinations' ? (
           <DestinationHighlightsPage lang={lang} onNavigateHome={() => handleNavClick('home')} />
+        ) : currentPage === 'gallery' ? (
+          <GalleryPage lang={lang} onNavigateHome={() => handleNavClick('home')} />
         ) : (
           <TransportRentPage 
             onSelectCar={handleSelectCar} 

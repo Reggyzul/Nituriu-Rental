@@ -114,6 +114,15 @@ export default function Header({
                 {t.nav_rentals}
               </button>
 
+              <button
+                onClick={() => handleItemClick('gallery')}
+                className={`hover:text-red-600 transition-colors cursor-pointer py-1 ${
+                  activeSection === 'gallery' ? 'text-red-600 font-black border-b-2 border-red-600' : ''
+                }`}
+              >
+                {t.nav_gallery}
+              </button>
+
             </nav>
 
             {/* 3. RIGHT: LANGUAGE SWITCHER TOGGLE & BOOK A TOUR BUTTON */}
@@ -201,6 +210,12 @@ export default function Header({
                 className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-red-600 py-2 border-b border-slate-100"
               >
                 {t.nav_rentals}
+              </button>
+              <button
+                onClick={() => handleItemClick('gallery')}
+                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-red-600 py-2 border-b border-slate-100"
+              >
+                {t.nav_gallery}
               </button>
 
               {/* Language Switcher in Mobile Drawer */}

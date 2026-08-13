@@ -162,6 +162,14 @@ export default function Footer({ lang, onNavigateSection }: FooterProps) {
                   ➔ {t.nav_rentals}
                 </button>
               </li>
+              <li>
+                <button
+                  onClick={() => onNavigateSection('gallery')}
+                  className="hover:text-red-400 transition-colors cursor-pointer"
+                >
+                  ➔ {t.nav_gallery}
+                </button>
+              </li>
             </ul>
           </div>
 
