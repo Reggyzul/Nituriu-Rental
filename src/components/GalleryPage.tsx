@@ -17,6 +17,56 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
   const galleryItems = [
     {
       id: 1,
+      title: isEN ? 'Mount Inerie Peak Climb' : 'Pendakian Puncak Gunung Inerie',
+      subtitle: isEN 
+        ? 'Tourists raising the Indonesian flag at the majestic peak of Mount Inerie.'
+        : 'Momen wisatawan membentangkan bendera merah putih di puncak megah Gunung Inerie.',
+      location: isEN ? 'Mount Inerie, Bajawa, Flores, NTT' : 'Gunung Inerie, Bajawa, Flores, NTT',
+      image: '/gallery_mount_inerie_flag.jpg',
+      badge: isEN ? 'Adventure' : 'Petualangan'
+    },
+    {
+      id: 2,
+      title: isEN ? 'Experiencing Ngada Culture' : 'Mengenal Tenun Ikat Adat Bena',
+      subtitle: isEN 
+        ? 'Tourists wearing traditional handwoven Tenun Ikat wraps in Kampung Bena.'
+        : 'Wisatawan mengenakan balutan kain tenun ikat tradisional khas di Kampung Adat Bena.',
+      location: isEN ? 'Bena Traditional Village, Bajawa, Flores, NTT' : 'Kampung Adat Bena, Bajawa, Flores, NTT',
+      image: '/gallery_tourists_bena.jpg',
+      badge: isEN ? 'Ngada Heritage' : 'Warisan Budaya'
+    },
+    {
+      id: 3,
+      title: isEN ? 'Sao Meze - Traditional Ngada House' : 'Sao Meze - Rumah Adat Ngada',
+      subtitle: isEN 
+        ? 'The towering thatched-roof traditional houses of Ngada tribe representing ancestral spirits.'
+        : 'Rumah adat beratap ilalang tinggi yang kokoh, simbol spiritualitas leluhur masyarakat Ngada.',
+      location: isEN ? 'Ngada Regency, Bajawa, Flores, NTT' : 'Kabupaten Ngada, Bajawa, Flores, NTT',
+      image: '/gallery_bena_house.jpg',
+      badge: isEN ? 'Architecture' : 'Arsitektur Adat'
+    },
+    {
+      id: 4,
+      title: isEN ? 'Spiderweb Rice Field (Sawah Lingko)' : 'Sawah Jaring Laba-Laba (Lingko)',
+      subtitle: isEN 
+        ? 'A unique traditional communal land division shaped like a spiderweb.'
+        : 'Keunikan pembagian lahan sawah adat suku Manggarai yang menyerupai jaring laba-laba.',
+      location: isEN ? 'Flores, East Nusa Tenggara' : 'Flores, Nusa Tenggara Timur',
+      image: '/gallery_spiderweb_ricefield.jpg',
+      badge: isEN ? 'Agriculture' : 'Sistem Adat'
+    },
+    {
+      id: 5,
+      title: isEN ? 'Exploring Indigenous Settlements' : 'Jelajah Perkampungan Tradisional Ngada',
+      subtitle: isEN 
+        ? 'International tourists learning about Ngada ancestral traditions in the traditional village.'
+        : 'Kunjungan wisatawan mancanegara mempelajari tradisi leluhur masyarakat adat Bajawa.',
+      location: isEN ? 'Ngada Traditional Village, Bajawa, Flores, NTT' : 'Kampung Adat Ngada, Bajawa, Flores, NTT',
+      image: '/gallery_tourists_ngada.jpg',
+      badge: isEN ? 'Local Experience' : 'Kunjungan Wisata'
+    },
+    {
+      id: 6,
       title: isEN ? 'Bena Traditional Village' : 'Kampung Adat Bena',
       subtitle: isEN 
         ? 'Exotic megalithic village with traditional houses at the foot of Mount Inerie.'
@@ -26,7 +76,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: isEN ? 'Ngada Culture' : 'Budaya Ngada'
     },
     {
-      id: 2,
+      id: 7,
       title: isEN ? 'Mount Inerie Peak' : 'Puncak Gunung Inerie',
       subtitle: isEN 
         ? 'The majestic pyramid-shaped volcano, an iconic landmark in Bajawa.'
@@ -36,7 +86,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: isEN ? 'Volcano Peak' : 'Puncak Gunung'
     },
     {
-      id: 3,
+      id: 8,
       title: isEN ? 'Mengeruda Hot Springs Soa' : 'Air Panas Mengeruda Soa',
       subtitle: isEN 
         ? 'A natural geothermal hot spring river, perfect for relaxing your body.'
@@ -46,7 +96,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: isEN ? 'Natural Spa' : 'Relaksasi Alami'
     },
     {
-      id: 4,
+      id: 9,
       title: isEN ? 'Riung 17 Islands Marine Park' : 'Taman Wisata Alam 17 Pulau Riung',
       subtitle: isEN 
         ? 'Exotic cluster of small islands featuring pristine white sands and snorkeling spots.'
@@ -56,7 +106,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: isEN ? 'Marine Park' : 'Wisata Bahari'
     },
     {
-      id: 5,
+      id: 10,
       title: isEN ? 'Wolobobo Hill (Above the Clouds)' : 'Bukit Wolobobo (Negeri di Atas Awan)',
       subtitle: isEN 
         ? 'The perfect vantage point to witness the morning mist and Mount Inerie.'
@@ -66,7 +116,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: isEN ? 'Mountain View' : 'Negeri di Atas Awan'
     },
     {
-      id: 6,
+      id: 11,
       title: isEN ? 'Danau Wawomudha Crater Lake' : 'Danau Kawah Wawomudha',
       subtitle: isEN 
         ? 'A mini volcanic crater lake with reddish water, surrounded by pine forests.'
@@ -76,7 +126,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: isEN ? 'Crater Lake' : 'Danau Vulkanik'
     },
     {
-      id: 7,
+      id: 12,
       title: isEN ? 'Wogo Megalithic Traditional Village' : 'Kampung Adat Megalitikum Wogo',
       subtitle: isEN 
         ? 'Historic megalithic structures and traditional Ngada carvings.'
@@ -86,7 +136,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: isEN ? 'Cultural Heritage' : 'Cagar Budaya'
     },
     {
-      id: 8,
+      id: 13,
       title: isEN ? 'Ogi Waterfall Bajawa' : 'Air Terjun Ogi Bajawa',
       subtitle: isEN 
         ? 'A spectacular 30-meter high waterfall surrounded by lush green valleys.'
@@ -96,7 +146,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: isEN ? 'Waterfall Nature' : 'Air Terjun Alam'
     },
     {
-      id: 9,
+      id: 14,
       title: isEN ? 'Traditional Aimere Distillery' : 'Destilasi Tradisional Aimere',
       subtitle: isEN 
         ? 'Witnessing the traditional process of distilling Flores local beverages from palm sap.'
