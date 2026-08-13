@@ -155,36 +155,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       image: '/dest_tomohon.avif',
       badge: isEN ? 'Crater Lake' : 'Danau Vulkanik'
     },
-    {
-      id: 15,
-      title: isEN ? 'Wogo Megalithic Traditional Village' : 'Kampung Adat Megalitikum Wogo',
-      subtitle: isEN 
-        ? 'Historic megalithic structures and traditional Ngada carvings.'
-        : 'Pemukiman adat alternatif Ngada dengan susunan batu megalitik bersejarah dan tiang adat Ngadhu-Bhaga.',
-      location: 'Wogo, Kabupaten Ngada, Flores, NTT',
-      image: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=800&q=80',
-      badge: isEN ? 'Cultural Heritage' : 'Cagar Budaya'
-    },
-    {
-      id: 16,
-      title: isEN ? 'Ogi Waterfall Bajawa' : 'Air Terjun Ogi Bajawa',
-      subtitle: isEN 
-        ? 'A spectacular 30-meter high waterfall surrounded by lush green valleys.'
-        : 'Air terjun megah setinggi 30 meter dengan debit air deras di tengah lembah hijau yang asri.',
-      location: 'Bajawa, Kabupaten Ngada, Flores, NTT',
-      image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80',
-      badge: isEN ? 'Waterfall Nature' : 'Air Terjun Alam'
-    },
-    {
-      id: 17,
-      title: isEN ? 'Traditional Aimere Distillery' : 'Destilasi Tradisional Aimere',
-      subtitle: isEN 
-        ? 'Witnessing the traditional process of distilling Flores local beverages from palm sap.'
-        : 'Proses pembuatan minuman adat khas Flores dari penyulingan nira pohon enau secara tradisional.',
-      location: 'Aimere, Kabupaten Ngada, Flores, NTT',
-      image: 'https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80',
-      badge: isEN ? 'Local Tradition' : 'Tradisi Lokal'
-    }
+
   ];
 
   return (
