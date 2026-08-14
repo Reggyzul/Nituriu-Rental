@@ -34,7 +34,7 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
       subtitleID: 'Rumah Adat Ngada & Warisan Batu Megalitikum',
       badgeEN: 'Cultural Heritage',
       badgeID: 'Kampung Adat',
-      image: '/dest_bunaken.avif',
+      image: '/dest_bena.jpg',
       rating: 5.0,
       reviews: 210,
       spotsEN: ['Kampung Adat Bena at Mount Inerie foot', 'Megalithic Stone Formations & Ngadhu-Bhaga', 'Kampung Adat Wogo Traditional Life', 'Handwoven Tenun Ikat Crafts'],
@@ -53,7 +53,7 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
       subtitleID: 'Gunung Piramida & Pemandian Air Panas Soa',
       badgeEN: 'Volcano & Geothermal',
       badgeID: 'Gunung & Air Panas',
-      image: '/dest_tomohon.avif',
+      image: '/dest_inerie.jpg',
       rating: 5.0,
       reviews: 190,
       spotsEN: ['Mount Inerie Pyramid Volcano Viewpoint', 'Mengeruda Natural Warm River Soak', 'Cool Mountain Atmosphere in Bajawa', 'Close to Soa Airport'],
@@ -72,7 +72,7 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
       subtitleID: 'Jelajah Pulau, Kelelawar & Pasir Putih',
       badgeEN: 'Marine Park',
       badgeID: 'Wisata Bahari',
-      image: '/dest_likupang.avif',
+      image: '/dest_riung.jpg',
       rating: 5.0,
       reviews: 240,
       spotsEN: ['Island Hopping White Sand Beaches', 'Snorkeling in Crystal Clear Water', 'Pulau Ontoloe Flying Fox Colony', 'Fresh Grilled Fish Coastal Lunch'],
@@ -91,11 +91,49 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
       subtitleID: 'Danau Kawah Eksotis & Perbukitan Pinus',
       badgeEN: 'Nature & Trekking',
       badgeID: 'Danau Kawah',
-      image: '/dest_manado_city.avif',
+      image: '/dest_wawomudha.jpg',
       rating: 4.8,
       reviews: 140,
       spotsEN: ['Reddish Crater Lake Viewpoint', 'Pine Forest Light Trekking', 'Quiet Atmosphere & Fresh Mountain Air', 'Photogenic Hill Lookout'],
       spotsID: ['Panorama Danau Kawah Wawomudha', 'Trekking Ringan Hutan Pinus', 'Suasana Tenang & Udara Sejuk', 'Spot Foto Panorama Alam']
+    },
+
+    // 5. BUKIT WOLOBOBO
+    {
+      id: 'wolobobo-hill',
+      categoryKey: 'jateng',
+      categoryNameEN: 'Scenic Viewpoint',
+      categoryNameID: 'Negeri di Atas Awan',
+      titleEN: 'Bukit Wolobobo Bajawa',
+      titleID: 'Bukit Wolobobo Bajawa',
+      subtitleEN: 'Land above the clouds overlooking Mount Inerie sunrise',
+      subtitleID: 'Panorama kabut awan pagi dan megahnya Gunung Inerie',
+      badgeEN: 'Above Clouds',
+      badgeID: 'Negeri di Atas Awan',
+      image: '/dest_wolobobo.jpg',
+      rating: 5.0,
+      reviews: 175,
+      spotsEN: ['Panoramic Sea of Clouds Sunrise', 'Direct View of Mount Inerie Peak', 'Cool Mountain Pine Forest Breeze', 'Wooden Viewing Deck & Photo Spot'],
+      spotsID: ['Panorama Sunrise Negeri di Atas Awan', 'Pemandangan Langsung Puncak Inerie', 'Hutan Pinus & Udara Pegunungan Sejuk', 'Gardu Pandang & Spot Foto Favorit']
+    },
+
+    // 6. DANAU KELIMUTU & OVERLAND FLORES
+    {
+      id: 'kelimutu-overland',
+      categoryKey: 'bali',
+      categoryNameEN: 'Flores Overland Trip',
+      categoryNameID: 'Overland Flores',
+      titleEN: 'Danau Kelimutu 3 Warna & Flores Overland',
+      titleID: 'Danau Kelimutu 3 Warna & Overland Flores',
+      subtitleEN: 'Tri-colored crater lake and journey across Flores',
+      subtitleID: 'Pesona danau kawah tiga warna dan jelajah rute Flores',
+      badgeEN: 'Overland Trip',
+      badgeID: 'Trip Flores',
+      image: '/dest_kelimutu.jpg',
+      rating: 5.0,
+      reviews: 260,
+      spotsEN: ['Tri-Colored Volcanic Crater Lake', 'Sunrise over Ende & Kelimutu National Park', 'Connecting Bajawa, Moni, Ende to Labuan Bajo', 'Flexible Overland Transport & Driver'],
+      spotsID: ['Danau Kawah Tiga Warna Kelimutu', 'Sunrise Spektakuler Taman Nasional Kelimutu', 'Rute Bajawa, Moni, Ende hingga Labuan Bajo', 'Layanan Transport Overland & Driver Profesional']
     }
   ];
 
@@ -112,7 +150,7 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-50 transform scale-105"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=1920')`
+            backgroundImage: `url('/dest_kelimutu.jpg')`
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/60 to-slate-950/90" />

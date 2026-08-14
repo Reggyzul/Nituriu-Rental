@@ -182,7 +182,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
         ? 'Exotic cluster of small islands featuring pristine white sands and snorkeling spots.'
         : 'Gugusan pulau eksotis dengan pasir putih halus, terumbu karang menawan, dan koloni kelelawar raksasa.',
       location: 'Riung, Kabupaten Ngada, Flores, NTT',
-      image: '/dest_likupang.avif',
+      image: '/dest_riung.jpg',
       badge: isEN ? 'Marine Park' : 'Wisata Bahari'
     },
     {
@@ -192,7 +192,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
         ? 'The perfect vantage point to witness the morning mist and Mount Inerie.'
         : 'Spot menikmati keindahan kabut pagi dan panorama Gunung Inerie berselimut awan putih.',
       location: 'Bajawa, Kabupaten Ngada, Flores, NTT',
-      image: 'https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=800&q=80',
+      image: '/dest_wolobobo.jpg',
       badge: isEN ? 'Mountain View' : 'Negeri di Atas Awan'
     },
     {
@@ -202,7 +202,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
         ? 'A mini volcanic crater lake with reddish water, surrounded by pine forests.'
         : 'Danau kawah vulkanis mini dengan air kemerahan yang dikelilingi hutan pinus pegunungan Bajawa.',
       location: 'Bajawa, Kabupaten Ngada, Flores, NTT',
-      image: '/dest_tomohon.avif',
+      image: '/dest_wawomudha.jpg',
       badge: isEN ? 'Crater Lake' : 'Danau Vulkanik'
     },
     {
@@ -225,7 +225,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-45 transform scale-105 transition-transform duration-1000"
           style={{
-            backgroundImage: `url('/dest_bunaken.avif')`
+            backgroundImage: `url('/dest_wolobobo.jpg')`
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/85 via-slate-950/65 to-slate-950/95" />

@@ -31,7 +31,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     duration: 'Full Day / 2D1N',
     route: ['Kota Bajawa', 'Kampung Adat Bena', 'Spot Foto Gunung Inerie', 'Pengrajin Tenun Ikat Ngada'],
     routeDisplay: 'Bajawa - Bena - Gunung Inerie',
-    image: '/dest_bunaken.avif',
+    image: '/dest_bena.jpg',
     badge: 'Wisata Budaya & Alam',
     minPrice: 'Hubungi Kami',
     tiers: [
@@ -67,7 +67,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     duration: 'Half Day / Full Day',
     route: ['Kota Bajawa', 'Bandara Soa', 'Pemandian Air Panas Mengeruda', 'Resto Alami'],
     routeDisplay: 'Bajawa - Bandara Soa - Air Panas Mengeruda',
-    image: '/dest_manado_city.avif',
+    image: '/dest_mengeruda.jpg',
     badge: 'Air Panas Alami',
     minPrice: 'Hubungi Kami',
     tiers: [
@@ -102,7 +102,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     duration: 'Full Day / 2D1N',
     route: ['Bajawa', 'Dermaga Riung', 'Pulau Rutong', 'Pulau Ontoloe (Kelewar)', 'Spot Snorkeling'],
     routeDisplay: 'Bajawa - Riung - Island Hopping 17 Pulau',
-    image: '/dest_likupang.avif',
+    image: '/dest_riung.jpg',
     badge: 'Wisata Bahari',
     minPrice: 'Hubungi Kami',
     tiers: [
@@ -139,7 +139,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     duration: 'Full Day',
     route: ['Kota Bajawa', 'Trekking Danau Wawomudha', 'Kampung Adat Wogo', 'Kuliner Bajawa'],
     routeDisplay: 'Bajawa - Danau Wawomudha - Kampung Wogo',
-    image: '/dest_tomohon.avif',
+    image: '/dest_wawomudha.jpg',
     badge: 'Danau Kawah & Budaya',
     minPrice: 'Hubungi Kami',
     tiers: [
@@ -173,7 +173,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     duration: '3D2N / 4D3N / Custom',
     route: ['Bajawa', 'Aimere', 'Riung', 'Mbay', 'Ende (Kelimutu)', 'Ruteng', 'Labuan Bajo'],
     routeDisplay: 'Bajawa - Ende - Ruteng - Labuan Bajo',
-    image: '/dest_manado_city.avif',
+    image: '/dest_overland_flores.jpg',
     badge: 'Custom Overland Trip',
     minPrice: 'Hubungi Kami',
     tiers: [

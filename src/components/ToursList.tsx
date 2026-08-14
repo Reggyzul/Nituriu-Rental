@@ -12,40 +12,40 @@ export default function ToursList({ lang }: ToursListProps) {
 
   const tourPackages = [
     {
-      id: 'tour-bromo',
-      title: lang === 'EN' ? '3D2N Malang Batu Bromo' : '3D2N Malang Batu Bromo',
-      duration: lang === 'EN' ? '3 Days 2 Nights' : '3 Hari 2 Malam (3D2N)',
-      location: 'Malang, Batu, Bromo',
-      price: 'Mulai Rp 4.600.000',
+      id: 'tour-bena-inerie',
+      title: lang === 'EN' ? 'Kampung Bena & Mount Inerie' : 'Kampung Adat Bena & Gunung Inerie',
+      duration: lang === 'EN' ? 'Full Day Tour' : '1 Hari Penuh (Full Day)',
+      location: 'Bajawa, Flores, NTT',
+      price: 'Hubungi Kami',
       description: lang === 'EN' 
-        ? 'Best private family trip package covering Mount Bromo sunrise, Batu attractions, and Malang city highlights.'
-        : 'Paket trip keluarga terbaik meliputi sunrise Gunung Bromo, objek wisata Batu, dan ikon Kota Malang.',
-      image: '/tours_bromo.avif',
-      waMessage: 'Halo Yoga Transport, saya tertarik memesan paket wisata 3D2N Malang Batu Bromo. Mohon info detailnya.'
+        ? 'Explore traditional Ngada megalithic village, stone architecture, and stunning views of Mount Inerie.'
+        : 'Jelajah desa adat megalitikum Ngada, arsitektur rumah adat, dan panorama megah Gunung Inerie.',
+      image: '/dest_bena.jpg',
+      waMessage: 'Halo Nituriu Transport, saya tertarik memesan paket wisata Kampung Bena & Gunung Inerie. Mohon info detailnya.'
     },
     {
-      id: 'tour-city',
-      title: lang === 'EN' ? 'City Tour Malang & Batu' : 'City Tour Malang & Batu',
-      duration: lang === 'EN' ? '1 Day Tour' : '1 Hari Penuh (1 Day)',
-      location: 'Malang & Batu',
-      price: 'Mulai Rp 1.500.000',
+      id: 'tour-riung',
+      title: lang === 'EN' ? 'Riung 17 Islands Marine Park' : 'Wisata Bahari Riung 17 Pulau',
+      duration: lang === 'EN' ? 'Full Day / 2D1N' : 'Full Day / 2D1N',
+      location: 'Riung, Ngada, NTT',
+      price: 'Hubungi Kami',
       description: lang === 'EN'
-        ? 'Flexible private city tour guide around Batu city, theme parks (Jatim Park), and local Malang culinary spots.'
-        : 'Panduan wisata kota fleksibel keliling kota Batu, theme park (Jatim Park), dan wisata kuliner Malang.',
-      image: 'https://images.unsplash.com/photo-1506015391300-4802dc74de2e?auto=format&fit=crop&q=80&w=600',
-      waMessage: 'Halo Yoga Transport, saya tertarik memesan paket City Tour Malang & Batu. Mohon info ketersediaannya.'
+        ? 'Island hopping, white sand beaches, snorkeling in crystal clear waters and flying foxes colony.'
+        : 'Island hopping pulau pasir putih, snorkeling terumbu karang laut jernih, dan koloni kelelawar.',
+      image: '/dest_riung.jpg',
+      waMessage: 'Halo Nituriu Transport, saya tertarik memesan paket Wisata Bahari Riung 17 Pulau. Mohon info ketersediaannya.'
     },
     {
-      id: 'tour-shuttle',
-      title: lang === 'EN' ? 'Shuttle & Drop Juanda Airport' : 'Shuttle & Drop Bandara Juanda',
-      duration: lang === 'EN' ? 'One Way' : 'Sekali Jalan',
-      location: 'Surabaya / Malang',
-      price: 'Mulai Rp 750.000',
+      id: 'tour-mengeruda',
+      title: lang === 'EN' ? 'Mengeruda Hot Springs Soa' : 'Air Panas Alami Mengeruda Soa',
+      duration: lang === 'EN' ? 'Half Day / Full Day' : 'Setengah Hari / Full Day',
+      location: 'Soa, Bajawa, NTT',
+      price: 'Hubungi Kami',
       description: lang === 'EN'
-        ? 'Punctual private pickup or drop off shuttle service from Malang to Surabaya Juanda Airport.'
-        : 'Layanan antar-jemput privat tepat waktu dari Malang ke Bandara Juanda Surabaya atau sebaliknya.',
-      image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=600',
-      waMessage: 'Halo Yoga Transport, saya ingin memesan layanan Drop Bandara Juanda. Mohon konfirmasi tarifnya.'
+        ? 'Relax and soak in natural geothermal warm river near Soa Airport with lush natural surroundings.'
+        : 'Relaksasi berendam di aliran sungai air panas alami panas bumi dekat Bandara Soa.',
+      image: '/dest_mengeruda.jpg',
+      waMessage: 'Halo Nituriu Transport, saya ingin memesan layanan wisata Air Panas Mengeruda Soa. Mohon info tarifnya.'
     }
   ];
 

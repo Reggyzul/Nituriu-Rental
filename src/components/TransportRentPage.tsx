@@ -69,7 +69,7 @@ export default function TransportRentPage({ onSelectCar, lang, onNavigateHome }:
         <div className="relative z-10 text-center space-y-2 px-4">
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-red-600/90 text-white font-extrabold text-[10px] uppercase tracking-widest mb-1 shadow-md">
             <Bus className="w-3.5 h-3.5 text-red-300" />
-            <span>Nituriu TravelATION</span>
+            <span>NITURIU TRANSPORT BAJAWA</span>
           </div>
 
           <h1 className="font-display font-black text-3xl sm:text-5xl text-white tracking-tight leading-tight uppercase">

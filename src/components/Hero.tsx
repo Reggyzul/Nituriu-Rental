@@ -50,7 +50,7 @@ export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps
         <div 
           className="absolute inset-0 bg-cover bg-center transform scale-105 transition-transform duration-1000"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=1920')`
+            backgroundImage: `url('/dest_wolobobo.jpg')`
           }}
         />
 

@@ -47,29 +47,29 @@ export default function Header({
       <div
         className={`w-full transition-all duration-300 ${
           isScrolled
-            ? 'bg-white/95 backdrop-blur-md py-3 shadow-md border-b border-slate-200/90'
-            : 'bg-white py-4 border-b border-slate-100'
+            ? 'bg-white/95 backdrop-blur-md py-2.5 sm:py-3 shadow-md border-b border-slate-200/90'
+            : 'bg-white py-3 sm:py-4 border-b border-slate-100 shadow-xs'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between gap-4">
+        <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between gap-2 sm:gap-4">
             
             {/* 1. LEFT: LOGO BRAND */}
             <div 
               onClick={() => handleItemClick('home')}
-              className="flex items-center gap-2 cursor-pointer group shrink-0"
+              className="flex items-center gap-2 sm:gap-2.5 cursor-pointer group min-w-0 flex-1 lg:flex-initial"
               id="header-logo"
             >
               <img
                 src="/baru/logo.avif"
-                alt="Nituriu Travel Logo"
-                className="h-24 sm:h-28 w-auto object-contain group-hover:scale-105 transition-transform duration-200"
+                alt="Nituriu Transport Bajawa Logo"
+                className="h-10 sm:h-12 md:h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-200 shrink-0"
               />
-              <div className="flex flex-col leading-snug">
-                <span className="font-display font-black text-sm sm:text-base uppercase tracking-tight transition-colors">
+              <div className="flex flex-col leading-tight min-w-0">
+                <span className="font-display font-black text-xs sm:text-sm md:text-base uppercase tracking-tight truncate">
                   <span className="text-red-600">NITURIU TRANSPORT</span> <span className="text-[#0f2b5c]">BAJAWA</span>
                 </span>
-                <span className="font-sans font-bold text-[9px] sm:text-[10px] uppercase tracking-widest text-slate-500">
+                <span className="hidden sm:block font-sans font-bold text-[9px] sm:text-[10px] uppercase tracking-widest text-slate-500 truncate">
                   {t.topbar_service}
                 </span>
               </div>
@@ -125,7 +125,7 @@ export default function Header({
 
             </nav>
 
-            {/* 3. RIGHT: LANGUAGE SWITCHER TOGGLE & BOOK A TOUR BUTTON */}
+            {/* 3. RIGHT (DESKTOP): LANGUAGE SWITCHER TOGGLE & BOOK A TOUR BUTTON */}
             <div className="hidden lg:flex items-center gap-3 shrink-0">
               
               {/* Language Switcher Toggle (EN / ID) */}
@@ -137,7 +137,7 @@ export default function Header({
                       ? 'bg-red-600 text-white shadow-xs font-extrabold'
                       : 'text-slate-600 hover:text-slate-900'
                   }`}
-                  title="English Language (Primary Default)"
+                  title="English Language"
                 >
                   <span>🇬🇧 EN</span>
                 </button>
@@ -148,7 +148,7 @@ export default function Header({
                       ? 'bg-red-600 text-white shadow-xs font-extrabold'
                       : 'text-slate-600 hover:text-slate-900'
                   }`}
-                  title="Bahasa Indonesia (Secondary)"
+                  title="Bahasa Indonesia"
                 >
                   <span>🇮🇩 ID</span>
                 </button>
@@ -163,14 +163,30 @@ export default function Header({
               </button>
             </div>
 
-            {/* Mobile Hamburger Toggle Button */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-xl text-slate-800 hover:bg-slate-100 transition-colors cursor-pointer shrink-0"
-              id="mobile-menu-toggle"
-            >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+            {/* 4. RIGHT (MOBILE): COMPACT LANG & HAMBURGER BUTTON (GARIS 3) */}
+            <div className="flex lg:hidden items-center gap-1.5 shrink-0">
+              <button
+                onClick={() => setLang(lang === 'EN' ? 'ID' : 'EN')}
+                className="px-2 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-200 text-[11px] font-extrabold text-slate-700 flex items-center gap-1 cursor-pointer transition-colors"
+                title="Ganti Bahasa / Switch Language"
+              >
+                <span>{lang === 'EN' ? '🇬🇧 EN' : '🇮🇩 ID'}</span>
+              </button>
+
+              {/* Mobile Hamburger Button (Garis 3) */}
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200 transition-all cursor-pointer flex items-center justify-center shadow-xs active:scale-95"
+                id="mobile-menu-toggle"
+                aria-label="Menu Navigasi"
+              >
+                {mobileMenuOpen ? (
+                  <X className="w-5 h-5 text-red-600 stroke-[2.5]" />
+                ) : (
+                  <Menu className="w-5 h-5 text-slate-800 stroke-[2.5]" />
+                )}
+              </button>
+            </div>
 
           </div>
         </div>
@@ -183,52 +199,72 @@ export default function Header({
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white border-b border-slate-200 shadow-xl overflow-hidden text-left"
+            className="lg:hidden bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-2xl overflow-hidden text-left"
             id="mobile-menu-drawer"
           >
-            <div className="px-4 pt-3 pb-6 space-y-3">
+            <div className="px-4 pt-3 pb-6 space-y-2">
               <button
                 onClick={() => handleItemClick('home')}
-                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-red-600 py-2 border-b border-slate-100"
+                className={`block w-full text-left font-display font-bold text-sm py-2.5 px-3 rounded-xl transition-colors ${
+                  activeSection === 'home'
+                    ? 'bg-red-50 text-red-600 font-black'
+                    : 'text-slate-800 hover:bg-slate-50'
+                }`}
               >
                 {t.nav_home}
               </button>
               <button
                 onClick={() => handleItemClick('about')}
-                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-red-600 py-2 border-b border-slate-100"
+                className={`block w-full text-left font-display font-bold text-sm py-2.5 px-3 rounded-xl transition-colors ${
+                  activeSection === 'about'
+                    ? 'bg-red-50 text-red-600 font-black'
+                    : 'text-slate-800 hover:bg-slate-50'
+                }`}
               >
                 {t.nav_about}
               </button>
               <button
                 onClick={() => handleItemClick('destinations')}
-                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-red-600 py-2 border-b border-slate-100"
+                className={`block w-full text-left font-display font-bold text-sm py-2.5 px-3 rounded-xl transition-colors ${
+                  activeSection === 'destinations'
+                    ? 'bg-red-50 text-red-600 font-black'
+                    : 'text-slate-800 hover:bg-slate-50'
+                }`}
               >
                 {t.nav_destinations}
               </button>
               <button
                 onClick={() => handleItemClick('cars')}
-                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-red-600 py-2 border-b border-slate-100"
+                className={`block w-full text-left font-display font-bold text-sm py-2.5 px-3 rounded-xl transition-colors ${
+                  activeSection === 'cars'
+                    ? 'bg-red-50 text-red-600 font-black'
+                    : 'text-slate-800 hover:bg-slate-50'
+                }`}
               >
                 {t.nav_rentals}
               </button>
               <button
                 onClick={() => handleItemClick('gallery')}
-                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-red-600 py-2 border-b border-slate-100"
+                className={`block w-full text-left font-display font-bold text-sm py-2.5 px-3 rounded-xl transition-colors ${
+                  activeSection === 'gallery'
+                    ? 'bg-red-50 text-red-600 font-black'
+                    : 'text-slate-800 hover:bg-slate-50'
+                }`}
               >
                 {t.nav_gallery}
               </button>
 
               {/* Language Switcher in Mobile Drawer */}
-              <div className="flex items-center justify-between py-2 border-b border-slate-100">
-                <span className="text-xs font-bold text-slate-500 uppercase">
-                  {lang === 'EN' ? 'Language:' : 'Pilih Bahasa:'}
+              <div className="flex items-center justify-between py-2.5 px-3 bg-slate-50 rounded-xl border border-slate-200/80 my-2">
+                <span className="text-xs font-bold text-slate-600 uppercase tracking-wide">
+                  {lang === 'EN' ? 'Language / Bahasa:' : 'Pilih Bahasa:'}
                 </span>
-                <div className="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-bold">
+                <div className="flex items-center bg-white p-1 rounded-lg border border-slate-200 text-xs font-bold">
                   <button
                     onClick={() => setLang('EN')}
-                    className={`px-3 py-1 rounded-lg transition-all cursor-pointer ${
+                    className={`px-2.5 py-1 rounded-md transition-all cursor-pointer ${
                       lang === 'EN'
-                        ? 'bg-red-600 text-white font-extrabold'
+                        ? 'bg-red-600 text-white font-extrabold shadow-xs'
                         : 'text-slate-600'
                     }`}
                   >
@@ -236,9 +272,9 @@ export default function Header({
                   </button>
                   <button
                     onClick={() => setLang('ID')}
-                    className={`px-3 py-1 rounded-lg transition-all cursor-pointer ${
+                    className={`px-2.5 py-1 rounded-md transition-all cursor-pointer ${
                       lang === 'ID'
-                        ? 'bg-red-600 text-white font-extrabold'
+                        ? 'bg-red-600 text-white font-extrabold shadow-xs'
                         : 'text-slate-600'
                     }`}
                   >
@@ -253,7 +289,7 @@ export default function Header({
                     setMobileMenuOpen(false);
                     onBookingClick();
                   }}
-                  className="w-full bg-[#dc2626] text-white font-display font-bold text-xs uppercase py-3 rounded-xl shadow-md flex items-center justify-center gap-2"
+                  className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-display font-bold text-xs uppercase py-3 rounded-xl shadow-md flex items-center justify-center gap-2 cursor-pointer tracking-wider"
                 >
                   <span>{t.nav_book_btn}</span>
                 </button>
