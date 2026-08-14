@@ -152,7 +152,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
         ? 'Exotic megalithic village with traditional houses at the foot of Mount Inerie.'
         : 'Keunikan perkampungan megalitikum di bawah kaki Gunung Inerie dengan tradisi Ngada yang masih sangat kental.',
       location: isEN ? 'Foot of Mount Inerie, Bajawa, Flores, NTT' : 'Kaki Gunung Inerie, Bajawa, Flores, NTT',
-      image: '/dest_bunaken.avif',
+      image: '/gallery_bena_village_real.jpg',
       badge: isEN ? 'Ngada Culture' : 'Budaya Ngada'
     },
     {
@@ -162,7 +162,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
         ? 'The majestic pyramid-shaped volcano, an iconic landmark in Bajawa.'
         : 'Gunung piramida megah ikonik Flores yang menantang dan memukau mata setiap wisatawan di Bajawa.',
       location: 'Bajawa, Kabupaten Ngada, Flores, NTT',
-      image: '/dest_tomohon.avif',
+      image: '/gallery_inerie_volcano_real.jpg',
       badge: isEN ? 'Volcano Peak' : 'Puncak Gunung'
     },
     {
@@ -172,7 +172,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
         ? 'A natural geothermal hot spring river, perfect for relaxing your body.'
         : 'Sungai air panas alami yang bersumber langsung dari panas bumi untuk merelaksasi tubuh.',
       location: 'Soa, Kabupaten Ngada, Flores, NTT',
-      image: '/dest_manado_city.avif',
+      image: '/gallery_mengeruda_soa_real.jpg',
       badge: isEN ? 'Natural Spa' : 'Relaksasi Alami'
     },
     {
@@ -204,6 +204,16 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       location: 'Bajawa, Kabupaten Ngada, Flores, NTT',
       image: '/dest_tomohon.avif',
       badge: isEN ? 'Crater Lake' : 'Danau Vulkanik'
+    },
+    {
+      id: 20,
+      title: isEN ? 'Wogo Megalithic Traditional Village' : 'Kampung Adat Megalitikum Wogo',
+      subtitle: isEN 
+        ? 'Historic megalithic structures and traditional Ngada carvings.'
+        : 'Pemukiman adat alternatif Ngada dengan susunan batu megalitik bersejarah dan tiang adat Ngadhu-Bhaga.',
+      location: 'Wogo, Kabupaten Ngada, Flores, NTT',
+      image: '/gallery_wogo_village_real.jpg',
+      badge: isEN ? 'Cultural Heritage' : 'Cagar Budaya'
     }
   ];
 
