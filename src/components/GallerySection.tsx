@@ -17,8 +17,8 @@ export default function GallerySection({ lang, onViewAllGallery }: GallerySectio
   const galleryItems = [
     {
       id: 1,
-      title: isEN ? 'Bena Cultural Visit' : 'Kunjungan Adat Kampung Bena',
-      subtitle: isEN ? 'Bena Traditional Village, Bajawa, Flores, NTT' : 'Kampung Adat Bena, Bajawa, Flores, NTT',
+      title: isEN ? "Ruteng Pu'u Traditional Village" : "Kampung adat Ruteng Pu'u",
+      subtitle: isEN ? "Ruteng Pu'u Traditional Village, Manggarai, Flores, NTT" : "Kampung Adat Ruteng Pu'u, Manggarai, Flores, NTT",
       image: '/gallery_tourists_bena_tenun.jpg'
     },
     {

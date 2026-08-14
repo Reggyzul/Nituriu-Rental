@@ -17,13 +17,13 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
   const galleryItems = [
     {
       id: 1,
-      title: isEN ? 'Bena Cultural Visit' : 'Kunjungan Adat Kampung Bena',
+      title: isEN ? "Ruteng Pu'u Traditional Village" : "Kampung adat Ruteng Pu'u",
       subtitle: isEN 
-        ? 'Joyful international tourists wearing traditional Flores handwoven fabrics during their visit to Kampung Bena.'
-        : 'Kegembiraan wisatawan asing mengenakan pakaian tenun ikat khas Flores saat berkunjung ke Kampung Bena.',
-      location: isEN ? 'Bena Traditional Village, Bajawa, Flores, NTT' : 'Kampung Adat Bena, Bajawa, Flores, NTT',
+        ? "Joyful international tourists wearing traditional Flores wraps during their visit to Ruteng Pu'u Traditional Village."
+        : "Kegembiraan wisatawan asing mengenakan pakaian adat khas Flores saat berkunjung ke Kampung Adat Ruteng Pu'u.",
+      location: isEN ? "Ruteng Pu'u Traditional Village, Manggarai, Flores, NTT" : "Kampung Adat Ruteng Pu'u, Manggarai, Flores, NTT",
       image: '/gallery_tourists_bena_tenun.jpg',
-      badge: isEN ? 'Ngada Culture' : 'Budaya Ngada'
+      badge: isEN ? 'Manggarai Culture' : 'Budaya Manggarai'
     },
     {
       id: 2,
