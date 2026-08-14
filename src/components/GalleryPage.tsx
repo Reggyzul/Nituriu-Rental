@@ -17,6 +17,56 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
   const galleryItems = [
     {
       id: 1,
+      title: isEN ? 'Trekking Mount Inerie Trail' : 'Trekking Jalur Gunung Inerie',
+      subtitle: isEN 
+        ? 'Challenging path along the grassy ridge toward Mount Inerie peak with wooden stairs and safety ropes.'
+        : 'Jalur menantang menyusuri punggungan berumput menuju puncak Gunung Inerie dengan tangga kayu dan tali pengaman.',
+      location: isEN ? 'Mount Inerie, Bajawa, Flores, NTT' : 'Gunung Inerie, Bajawa, Flores, NTT',
+      image: '/gallery_inerie_trekking.jpg',
+      badge: isEN ? 'Adventure' : 'Petualangan'
+    },
+    {
+      id: 2,
+      title: isEN ? 'Wae Rebo Traditional Village' : 'Kampung Adat Wae Rebo',
+      subtitle: isEN 
+        ? 'The legendary village above the clouds featuring 7 cone-shaped Mbaru Niang traditional houses.'
+        : 'Keindahan desa adat di atas awan Flores dengan 7 rumah adat Mbaru Niang berbentuk kerucut yang legendaris.',
+      location: isEN ? 'Wae Rebo Village, Manggarai, Flores, NTT' : 'Desa Wae Rebo, Manggarai, Flores, NTT',
+      image: '/gallery_waerebo_village.jpg',
+      badge: isEN ? 'World Heritage' : 'Warisan Dunia'
+    },
+    {
+      id: 3,
+      title: isEN ? 'Mount Inerie Pyramid Peak' : 'Puncak Gunung Piramida Inerie',
+      subtitle: isEN 
+        ? 'The majestic silhouette of Mount Inerie rising like a natural pyramid under the clear blue Flores sky.'
+        : 'Pesona megah Gunung Inerie yang menjulang tinggi menyerupai piramida alam di bawah langit biru Flores.',
+      location: isEN ? 'Bajawa, Ngada Regency, Flores, NTT' : 'Bajawa, Kabupaten Ngada, Flores, NTT',
+      image: '/gallery_inerie_volcano.jpg',
+      badge: isEN ? 'Volcano' : 'Gunung Berapi'
+    },
+    {
+      id: 4,
+      title: isEN ? 'Group Tour at Bena Village' : 'Wisata Rombongan di Kampung Bena',
+      subtitle: isEN 
+        ? 'Group of tourists enjoying their historic visit at the megalithic stone steps of Bena traditional village.'
+        : 'Momen kebersamaan wisatawan di tangga batu megalitikum perkampungan adat Kampung Bena yang bersejarah.',
+      location: isEN ? 'Bena Traditional Village, Bajawa, Flores, NTT' : 'Kampung Adat Bena, Bajawa, Flores, NTT',
+      image: '/gallery_tourists_bena_group.jpg',
+      badge: isEN ? 'Local Experience' : 'Kunjungan Wisata'
+    },
+    {
+      id: 5,
+      title: isEN ? 'Exploring Flores with Nituriu Transport' : 'Trip Seru Keliling Flores',
+      subtitle: isEN 
+        ? 'Fun overland road trip exploring Flores scenery with our reliable transport unit and professional driver.'
+        : 'Perjalanan darat yang menyenangkan menggunakan armada andalan dan sopir berpengalaman menjelajah keindahan Flores.',
+      location: isEN ? 'Flores Overland Tour Service' : 'Layanan Overland Tour Flores',
+      image: '/gallery_tourists_turquoise_car.jpg',
+      badge: isEN ? 'Private Tour' : 'Trip Privat'
+    },
+    {
+      id: 6,
       title: isEN ? "Ruteng Pu'u Traditional Village" : "Kampung adat Ruteng Pu'u",
       subtitle: isEN 
         ? "Joyful international tourists wearing traditional Flores wraps during their visit to Ruteng Pu'u Traditional Village."
@@ -26,7 +76,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: isEN ? 'Manggarai Culture' : 'Budaya Manggarai'
     },
     {
-      id: 2,
+      id: 7,
       title: isEN ? 'Wologai Traditional Village Flores' : 'Kampung Adat Wologai Flores',
       subtitle: isEN 
         ? 'Tourist group standing proudly in front of the historic Wologai traditional village sign.'
@@ -36,7 +86,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: isEN ? 'Cultural Tourism' : 'Wisata Budaya'
     },
     {
-      id: 3,
+      id: 8,
       title: isEN ? 'Premium Tour Transport Service Flores' : 'Layanan Transportasi Terbaik Flores',
       subtitle: isEN 
         ? 'Our satisfied tourists posing next to their comfortable private rental vehicle and friendly local driver.'
@@ -46,7 +96,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: isEN ? 'Nituriu Fleet' : 'Armada Nituriu'
     },
     {
-      id: 4,
+      id: 9,
       title: isEN ? 'Mount Inerie Peak Climb' : 'Pendakian Puncak Gunung Inerie',
       subtitle: isEN 
         ? 'Tourists raising the Indonesian flag at the majestic peak of Mount Inerie.'
@@ -56,7 +106,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: isEN ? 'Adventure' : 'Petualangan'
     },
     {
-      id: 5,
+      id: 10,
       title: isEN ? 'Experiencing Ngada Culture' : 'Mengenal Tenun Ikat Adat Bena',
       subtitle: isEN 
         ? 'Tourists wearing traditional handwoven Tenun Ikat wraps in Kampung Bena.'
@@ -66,7 +116,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: isEN ? 'Ngada Heritage' : 'Warisan Budaya'
     },
     {
-      id: 6,
+      id: 11,
       title: isEN ? 'Sao Meze - Traditional Ngada House' : 'Sao Meze - Rumah Adat Ngada',
       subtitle: isEN 
         ? 'The towering thatched-roof traditional houses of Ngada tribe representing ancestral spirits.'
@@ -76,7 +126,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: isEN ? 'Architecture' : 'Arsitektur Adat'
     },
     {
-      id: 7,
+      id: 12,
       title: isEN ? 'Spiderweb Rice Field (Sawah Lingko)' : 'Sawah Jaring Laba-Laba (Lingko)',
       subtitle: isEN 
         ? 'A unique traditional communal land division shaped like a spiderweb.'
@@ -86,7 +136,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: isEN ? 'Agriculture' : 'Sistem Adat'
     },
     {
-      id: 8,
+      id: 13,
       title: isEN ? 'Exploring Indigenous Settlements' : 'Jelajah Perkampungan Tradisional Ngada',
       subtitle: isEN 
         ? 'International tourists learning about Ngada ancestral traditions in the traditional village.'
@@ -96,7 +146,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: isEN ? 'Local Experience' : 'Kunjungan Wisata'
     },
     {
-      id: 9,
+      id: 14,
       title: isEN ? 'Bena Traditional Village' : 'Kampung Adat Bena',
       subtitle: isEN 
         ? 'Exotic megalithic village with traditional houses at the foot of Mount Inerie.'
@@ -106,7 +156,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: isEN ? 'Ngada Culture' : 'Budaya Ngada'
     },
     {
-      id: 10,
+      id: 15,
       title: isEN ? 'Mount Inerie Peak' : 'Puncak Gunung Inerie',
       subtitle: isEN 
         ? 'The majestic pyramid-shaped volcano, an iconic landmark in Bajawa.'
@@ -116,7 +166,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: isEN ? 'Volcano Peak' : 'Puncak Gunung'
     },
     {
-      id: 11,
+      id: 16,
       title: isEN ? 'Mengeruda Hot Springs Soa' : 'Air Panas Mengeruda Soa',
       subtitle: isEN 
         ? 'A natural geothermal hot spring river, perfect for relaxing your body.'
@@ -126,7 +176,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: isEN ? 'Natural Spa' : 'Relaksasi Alami'
     },
     {
-      id: 12,
+      id: 17,
       title: isEN ? 'Riung 17 Islands Marine Park' : 'Taman Wisata Alam 17 Pulau Riung',
       subtitle: isEN 
         ? 'Exotic cluster of small islands featuring pristine white sands and snorkeling spots.'
@@ -136,7 +186,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: isEN ? 'Marine Park' : 'Wisata Bahari'
     },
     {
-      id: 13,
+      id: 18,
       title: isEN ? 'Wolobobo Hill (Above the Clouds)' : 'Bukit Wolobobo (Negeri di Atas Awan)',
       subtitle: isEN 
         ? 'The perfect vantage point to witness the morning mist and Mount Inerie.'
@@ -146,7 +196,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: isEN ? 'Mountain View' : 'Negeri di Atas Awan'
     },
     {
-      id: 14,
+      id: 19,
       title: isEN ? 'Danau Wawomudha Crater Lake' : 'Danau Kawah Wawomudha',
       subtitle: isEN 
         ? 'A mini volcanic crater lake with reddish water, surrounded by pine forests.'
@@ -154,8 +204,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       location: 'Bajawa, Kabupaten Ngada, Flores, NTT',
       image: '/dest_tomohon.avif',
       badge: isEN ? 'Crater Lake' : 'Danau Vulkanik'
-    },
-
+    }
   ];
 
   return (
